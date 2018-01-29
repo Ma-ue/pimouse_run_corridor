@@ -4,7 +4,7 @@
   <version>0.0.0</version>
   <description>The pimouse_run_corridor package</description>
   <maintainer email="1126017jn@s.chibakoudai.jp">Masashi Uehara</maintainer>
-  <license>BSD</license>
+  <license>MIT</license>
   <url type="website">http://ma-ue.github.io</url>
   <author email="1126017jn@s.chibakoudai.jp">Masashi Uehara</author>
 
@@ -29,6 +29,8 @@
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <run_depend>rospy</run_depend>
   <run_depend>pimouse_ros</run_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
