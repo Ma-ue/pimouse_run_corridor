@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <name>pimouse_run_corridor</name>
+  <version>0.0.0</version>
+  <description>The pimouse_run_corridor package</description>
+  <maintainer email="1126017jn@s.chibakoudai.jp">Masashi Uehara</maintainer>
+  <license>MIT</license>
+  <url type="website">http://ma-ue.github.io</url>
+  <author email="1126017jn@s.chibakoudai.jp">Masashi Uehara</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>pimouse_ros</run_depend>
+</package>
