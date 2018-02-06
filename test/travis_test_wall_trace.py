@@ -22,12 +22,12 @@ class WallTraceTest(unittest.TestCase):
         return left, right
 
     def test_io(self):
-        self.set_sensor_values?gc(400,100,100,0) #total: 600
+        self.set_sensor_values(400,100,100,0) #total: 600
         time.sleep(0.3)
         left, right = self.get_freqs()
         self.assertTrue(left == right == 0, "can't stop")
         
-        self.set_sensor_values?gc(0,5,1000,0) #side direction is not a trigger of stop 
+        self.set_sensor_values(0,5,1000,0) #side direction is not a trigger of stop 
         time.sleep(0.3)
         left, right = self.get_freqs()
         self.assertTrue(left == right != 0, "stop wrongly by side sensors")
