@@ -2,7 +2,7 @@
 import unittest, rostest
 import rosnode, rospy
 import time
-from std_msgs.msg import Uint16
+from std_msgs.msg import UInt16
 from std_srvs.srv import Trigger, TriggerResponse
 
 class WallStopTest(unittest.TestCase):
