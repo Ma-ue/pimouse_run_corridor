@@ -12,7 +12,7 @@ class WallStopTest(unittest.TestCase):
 
     def set_sensor_values(self,lf,ls,rs,rf):
         with open("/dev/rtlightsensor0","w") as f:
-        f.write("%d %d %d %d\n" % (rf,rs,ls,lf))
+            f.write("%d %d %d %d\n" % (rf,rs,ls,lf))
 
     def get_freqs(self):
         with open("/dev/rtmotor_raw_l0","r") as lf,\
