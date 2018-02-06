@@ -20,19 +20,15 @@ class WallStopAccelTest(unittest.TestCase):
         return left, right
 
     def test_io(self):
-        left, right = self.set_sensor_values(400,100,100,0) #total: 600
+        self.set_sensor_values(400,100,100,0) #total: 600
+        time.sleep(0.3)
+        left, right = get_freqs(self)
         self.assertTrue(left == right ==0, "can't stop")
         
         left, right = self.set_sensor_values(40,0,0,99) #total: 49 
+        time.sleep(0.3)
+        left, right = get_freqs(self)
         self.assertTrue(0 < left == right < 1000, "can't move again")
-
-        time.sleep(5.0)
-        left, right = self.set_sensor_values(40,0,0,99) #total: 49 
-        self.assertTrue(2000 < left == right, "can't accerelate")
-
-
-        left, right = self.set_sensor_values(15,0,20,15) #total: 50
-        self.assertTrue(left == right == 0, "can't stop again")
 
 if __name__ == '__main__':
     time.sleep(3)
