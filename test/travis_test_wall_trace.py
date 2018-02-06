@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 import unittest, rostest
 import rosnode, rospy
-import time
+import time, sys
+from std_msgs.msg import UInt16
+from std_srvs.srv import Trigger, TriggerResponse
 
 class WallTraceTest(unittest.TestCase):
     def test_node_exist(self):
