@@ -22,14 +22,15 @@ class WallStopTest(unittest.TestCase):
         return left, right
 
     def test_io(self):
-        left, right = self.set_sensor_values(400,100,100,0) #total: 600
-        self.assertTrue(left == 0 and right ==0, "can't stop")
+        self.set_sensor_values(400,100,100,0) #total: 600
+        time.sleep(0.3)
+        left, right = self.get_freqs()
+        self.assertTrue(left == 0 and right == 0, "can't stop")
         
-        left, right = self.set_sensor_values(400,0,0,99) #total: 499 
+        self.set_sensor_values(400,0,0,99) #total: 499 
+        time.sleep(0.3)
+        left, right = self.get_freqs()
         self.assertTrue(left != 0 and right != 0, "can't move again")
-
-        left, right = self.set_sensor_values(150,0,200,150) #total: 500
-        self.assertTrue(left == 0 and right ==0, "can't stop")
 
 if __name__ =='__main__':
     time.sleep(3)
