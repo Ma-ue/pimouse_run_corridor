@@ -22,12 +22,12 @@ class WallStopAccelTest(unittest.TestCase):
     def test_io(self):
         self.set_sensor_values(400,100,100,0) #total: 600
         time.sleep(0.3)
-        left, right = get_freqs(self)
+        left, right = self.get_freqs()
         self.assertTrue(left == right ==0, "can't stop")
         
         left, right = self.set_sensor_values(40,0,0,99) #total: 49 
         time.sleep(0.3)
-        left, right = get_freqs(self)
+        left, right = self.get_freqs()
         self.assertTrue(0 < left == right < 1000, "can't move again")
 
 if __name__ == '__main__':
