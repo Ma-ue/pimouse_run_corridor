@@ -8,7 +8,7 @@ class WallStopAccelTest(unittest.TestCase):
         nodes = rosnode.get_node_names()
         self.assertIn('wall_stop_accel',nodes, "node does not exist")
     
-    def set_sensor_values(lf,ls,rs,rf):
+    def set_sensor_values(self,lf,ls,rs,rf):
         with open("/dev/rtlightsensor0","w") as f:
             f.write("%d %d %d %d\n" % (rf,rs,ls,lf))
 
