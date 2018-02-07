@@ -32,13 +32,13 @@ class WallTrace():
             else:
                 target = 50
                 error = (target - s.left_side)/50.0
-                data.angular.z = error * 3 * math.pi /180
+                data.angular.z = error * 3 * math.pi /180.0
 
             self.cmd_vel.publish(data)
             rate.sleep()
 
 if __name__ == '__main__':
-    rospy.init_node('wall_trace')
+    rospy.init_node('/wall_trace')
     rospy.wait_for_service('/motor_on')
     rospy.wait_for_service('/motor_off')
     rospy.on_shutdown(rospy.ServiceProxy('/motor_off',Trigger).call)
