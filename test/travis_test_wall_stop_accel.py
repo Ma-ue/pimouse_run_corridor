@@ -26,11 +26,6 @@ class WallStopAccelTest(unittest.TestCase):
         time.sleep(0.3)
         left, right = self.get_freqs()
         self.assertTrue(left == right ==0, "can't stop")
-        
-        self.set_sensor_values(40,0,0,99) #total: 49 
-        time.sleep(0.3)
-        left, right = self.get_freqs()
-        self.assertTrue(0 < left == right < 1000, "can't move again")
 
 if __name__ == '__main__':
     time.sleep(3)
