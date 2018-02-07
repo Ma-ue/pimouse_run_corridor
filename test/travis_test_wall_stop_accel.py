@@ -8,7 +8,7 @@ from std_srvs.srv import Trigger, TriggerResponse
 class WallStopAccelTest(unittest.TestCase):
     def test_node_exist(self):
         nodes = rosnode.get_node_names()
-        self.assertIn('wall_stop_accel',nodes, "node does not exist")
+        self.assertIn('/wall_stop_accel',nodes, "node does not exist")
     
     def set_sensor_values(self,lf,ls,rs,rf):
         with open("/dev/rtlightsensor0","w") as f:
